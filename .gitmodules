@@ -1,0 +1,7 @@
+[submodule "data/audiocaps"]
+	path = data/audiocaps
+	url = https://github.com/cdjkim/audiocaps.git
+
+[submodule "PretrainedSED"]
+	path = PretrainedSED
+	url = https://github.com/fschmid56/PretrainedSED.git

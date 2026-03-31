@@ -1,0 +1,40 @@
+python3 train_clap.py \
+    --phase 0 \
+    --seldnet_path pretrain_spatial_encoder/output_beats_seldnet/ckpt/last_model.pt \
+    --non_spatial_root output_moving/non_spatial_precomputed \
+    --epochs 20 \
+    --batch_size 32 \
+    --lr 1e-4 \
+    --weight_decay 1e-4 \
+    --num_workers 16 \
+    --output_dir output_moving_clap \
+    --fusion_type cross_attn \
+    --pooling_type adaptive \
+    --hidden_dim 768 \
+    --unfreeze_beats_layers 2 \
+    --load_spatial_clap \
+    --use_text_attention \
+    --use_amp
+
+python3 train_clap.py \
+    --phase 1 \
+    --pretrain_checkpoint output_moving_clap/phase0/ckpt/last_model.pt \
+    --precomputed_root output_moving/simulated_spatial_sound \
+    --epochs 40 \
+    --batch_size 32 \
+    --lr 1e-4 \
+    --weight_decay 1e-4 \
+    --num_workers 16 \
+    --output_dir output_moving_clap \
+    --fusion_type cross_attn \
+    --pooling_type adaptive \
+    --spatial_contrastive_weight 0.01 \
+    --swap_weight 0.3 \
+    --exclude_aug_types mixed_mov_mov \
+    --swap_loss_text_margin 0.3 \
+    --swap_loss_audio_margin 0.2 \
+    --hidden_dim 768 \
+    --unfreeze_beats_layers 2 \
+    --spatial_loss_start_epoch 0 \
+    --use_text_attention \
+    --use_amp
