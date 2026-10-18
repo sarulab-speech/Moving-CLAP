@@ -71,11 +71,12 @@ Refer to `model_usage.py` for examples on how to load the model and compute embe
 If you use Moving-CLAP in your research, please cite the following paper:
 
 ```
-@inproceedings{Hayasaki_DCASE2026_01,
-author = {Yuki Hayasaki and Kentaro Seki and Yuki Okamoto and Kouei Yamaoka and Yuki Saito, and Hiroshi Saruwatari},
+@inproceedings{hayasaki2026,
+author = {Hayasaki, Yuki and Seki, Kentaro and Okamoto, Yuki and Yamaoka, Kouei and Saito, Yuki and Saruwatari, Hiroshi},
 title = {Moving-CLAP: Spatially Aware Audio–Language Embeddings for Moving Sound Sources},
+booktitle = {Proceedings of the 11th Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE 2026)},
 year = {2026},
-booktitle = {Proc. Detection and Classification of Acoustic Scenes and Events (DCASE)},
-pages = {},
+pages = {255--259},
+doi = {10.5281/zenodo.22954971}
 }
 ```
