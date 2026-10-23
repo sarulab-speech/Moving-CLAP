@@ -76,7 +76,7 @@ author = {Hayasaki, Yuki and Seki, Kentaro and Okamoto, Yuki and Yamaoka, Kouei 
 title = {Moving-CLAP: Spatially Aware Audio–Language Embeddings for Moving Sound Sources},
 booktitle = {Proceedings of the 11th Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE 2026)},
 year = {2026},
-pages = {255--259},
+pages = {11--15},
 doi = {10.5281/zenodo.22954971}
 }
 ```
